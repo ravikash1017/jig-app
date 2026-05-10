@@ -41,7 +41,7 @@ async function sendMessage() {
 
     try {
 
-        const response = await fetch("/chat", {
+        const response = await fetch("https://jig-qf5e2kqy-ravi-kashyap-s-projects.vercel.app/chat", {
 
             method: "POST",
 
