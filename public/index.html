@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIG AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>JIG AI</h2>
+
+            <button class="new-chat-btn">
+                + New Chat
+            </button>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="chat-section">
+
+            <div id="chat-box" class="chat-box">
+
+                <div class="bot-message message">
+                    Hello 👋 How can I help you?
+                </div>
+
+            </div>
+
+            <div class="input-area">
+                <input
+                    type="text"
+                    id="user-input"
+                    placeholder="Send a message..."
+                >
+
+                <button onclick="sendMessage()">
+                    Send
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
