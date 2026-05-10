@@ -16,10 +16,6 @@ const client = new OpenAI({
     apiKey: process.env.OPENROUTER_API_KEY,
 });
 
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/public/index.html");
-});
-
 app.post("/chat", async (req, res) => {
 
     try {
