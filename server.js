@@ -15,9 +15,11 @@ const client = new OpenAI({
     baseURL: "https://openrouter.ai/api/v1",
     apiKey: process.env.OPENROUTER_API_KEY,
 });
+
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
+
 app.post("/chat", async (req, res) => {
 
     try {
@@ -25,7 +27,7 @@ app.post("/chat", async (req, res) => {
         const userMessage = req.body.message;
 
         const completion = await client.chat.completions.create({
-            model: "openai/gpt-3.5-turbo",
+            model: "openai/gpt-4o-mini",
             messages: [
                 {
                     role: "user",
@@ -50,8 +52,4 @@ app.post("/chat", async (req, res) => {
     }
 });
 
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+module.exports = app;
